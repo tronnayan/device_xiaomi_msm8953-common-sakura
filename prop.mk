@@ -91,17 +91,6 @@ persist.qfp=false
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.fm.transmitter=false
 
-# Framework boost
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.at_library=true \
-vendor.iop.enable_uxe=1 \
-vendor.perf.iop_v3.enable=true \
-vendor.perf.iop_v3.enable.debug=false \
-vendor.enable.prefetch=false \
-vendor.iop.enable_prefetch_ofr=false \
-vendor.perf.gestureflingboost.enable=true \
-vendor.perf.workloadclassifier.enable=true
-
 # Frp
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
@@ -129,7 +118,6 @@ vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
 vendor.vidc.enc.disable_bframes=1 \
 vendor.video.disable.ubwc=1 \
-vendor.display.enable_default_color_mode=1 \
 vendor.gralloc.enable_fb_ubwc=1 \
 vendor.video.disable.ubwc=1
 
@@ -159,10 +147,6 @@ persist.rild.nitz_short_ons_0="" \
 persist.rild.nitz_short_ons_1="" \
 persist.rild.nitz_short_ons_2="" \
 persist.rild.nitz_short_ons_3=""
-
-# Property to enable display default color mode
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.display.enable_default_color_mode=1
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -194,16 +178,6 @@ service.qti.ims.enabled=1 \
 persist.vendor.vt.supported=1 \
 persist.vendor.sys.cnd.iwlan=1 \
 persist.vendor.cne.logging.qxdm=3974
-
-# SurfaceFlinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-ro.surface_flinger.protected_contents=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-debug.sf.early_phase_offset_ns=1500000 \
-debug.sf.early_app_phase_offset_ns=1500000 \
-debug.sf.early_gl_phase_offset_ns=3000000 \
-debug.sf.early_gl_app_phase_offset_ns=15000000
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
